@@ -8,14 +8,20 @@ import java.util.StringTokenizer;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int T = Integer.parseInt(br.readLine());
-		String []word = new String[T];
-		for (int i =0; i < T; i++) {
-			word[i] = br.readLine();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		String N = st.nextToken();
+		int B = Integer.parseInt(st.nextToken());
+		char[] NtoChar = new char[N.length()];
+		int[]
+		for (int i = 10; i < 36; i++) {
+			NtoChar[i] = N.charAt(i);
 		}
-		for(int i=0; i<T; i++) {
-			System.out.println(word[i].substring(0,1));
+		for (int i = 0; i < N.length(); i++) {
+
 			
+
 		}
+
 	}
 }

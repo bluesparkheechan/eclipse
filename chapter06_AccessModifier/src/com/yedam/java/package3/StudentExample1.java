@@ -1,8 +1,8 @@
-package com.yedam.java.check;
+package com.yedam.java.package3;
 
 import java.util.Scanner;
 
-public class StudentExample {
+public class StudentExample1 {
 	public static void main(String[] args) {
 		boolean run = true; // 프로그램의 실행여부
 		int studentNum = 0; // 학생수
@@ -54,25 +54,25 @@ public class StudentExample {
 				 수학점수 중 최고점 받은 학생이름, 수학점수
 				 영어점수 중 최고점 받은 학생이름, 영어점수
 				 */
-				MaxScore korMax = new MaxScore(0, scoreList[0].getKoreanScore());
+				MaxScore korMax = new MaxScore(0, scoreList[0].getKorScore());
 				MaxScore mathMax = new MaxScore(0, scoreList[0].getMathScore());
-				MaxScore engMax = new MaxScore(0, scoreList[0].getEnglishScore());
+				MaxScore engMax = new MaxScore(0, scoreList[0].getEngScore());
 				
 				for(int i=0; i < studentNum; i++) {
 					Student student = scoreList[i];
-					if(korMax.getScore() < student.getKoreanScore()) {
+					if(korMax.getScore() < student.getKorScore()) {
 						korMax.setIdx(i);
 					}
 					if(mathMax.getScore() < student.getMathScore()) {
 						mathMax.setIdx(i);
 					}
-					if(engMax.getScore() < student.getEnglishScore()) {
+					if(engMax.getScore() < student.getEngScore()) {
 						engMax.setIdx(i);
 					}
 				}
-				System.out.printf("국어 최고점을 받은 학생은 %s이고 점수는 %d\n", scoreList[korMax.getIdx()].getName(), scoreList[korMax.getIdx()].getKoreanScore());
+				System.out.printf("국어 최고점을 받은 학생은 %s이고 점수는 %d\n", scoreList[korMax.getIdx()].getName(), scoreList[korMax.getIdx()].getKorScore());
 				System.out.printf("수학 최고점을 받은 학생은 %s이고 점수는 %d\n", scoreList[mathMax.getIdx()].getName(), scoreList[mathMax.getIdx()].getMathScore());
-				System.out.printf("영어 최고점을 받은 학생은 %s이고 점수는 %d\n", scoreList[engMax.getIdx()].getName(), scoreList[engMax.getIdx()].getEnglishScore());
+				System.out.printf("영어 최고점을 받은 학생은 %s이고 점수는 %d\n", scoreList[engMax.getIdx()].getName(), scoreList[engMax.getIdx()].getEngScore());
 
 			} else if (selectNo == 5) {
 				run = false;
